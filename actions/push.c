@@ -20,11 +20,11 @@ int    push(t_list **stack_a, t_list **stack_b)
 void    pa(t_list **a, t_list **b)
 {
         if(push(b,a)==1)
-                write(1,"pa",2);
+                write(1,"pa\n",3);
 }
 void    pb(t_list **a, t_list **b)
 {
         if(push(a,b)==1)
-        write(1,"pb",2);
+        write(1,"pb\n",3);
 }
 

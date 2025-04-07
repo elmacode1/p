@@ -17,16 +17,16 @@ void    rrotate(t_list **stack){
 void    rra(t_list **stack_a)
 {
         rrotate(stack_a);
-        write(1,"rra",3);
+        write(1,"rra\n",4);
 }
 void    rrb(t_list **stack_b)
 {
         rrotate(stack_b);
-        write(1,"rrb",3);
+        write(1,"rrb\n",4);
 }
 void    rrr(t_list **stack_a, t_list **stack_b)
 {
         rrotate(stack_a);
         rrotate(stack_b);
-        write(1,"rrr",3);
+        write(1,"rrr\n",4);
 }

@@ -22,32 +22,32 @@ void    swap(t_list **head)
 void    sa(t_list **lst)
 {
         swap(lst);
-        write(1,"sa",2);
+        write(1,"sa\n",3);
 }
 void    sb(t_list **lst)
 {
         swap(lst);
-        write(1,"sb",2);
+        write(1,"sb\n",3);
 }
 void    ss(t_list **stack_a, t_list **stack_b)
 {
         swap(stack_a);
         swap(stack_b);
-        write(1,"ss",2);
+        write(1,"ss\n",3);
 }
-int main()
-{
-        t_list *head=NULL;
-        t_list *tmp;
-        int tab[5]={1,-8,0,12,7};
-        ft_lstadd_back(&head,lstnew(tab[0]));
-        ft_lstadd_back(&head,lstnew(tab[1]));
-        ft_lstadd_back(&head,lstnew(tab[2]));
-        ft_lstadd_back(&head,lstnew(tab[3]));
-        tmp=head;
+// int main()
+// {
+//         t_list *head=NULL;
+//         t_list *tmp;
+//         int tab[5]={1,-8,0,12,7};
+//         ft_lstadd_back(&head,lstnew(tab[0]));
+//         ft_lstadd_back(&head,lstnew(tab[1]));
+//         ft_lstadd_back(&head,lstnew(tab[2]));
+//         ft_lstadd_back(&head,lstnew(tab[3]));
+//         tmp=head;
 
-        sb(&head);
-        int *ptr;
-        test(ptr);
+//         sb(&head);
+//         int *ptr;
+//         test(ptr);
         
-}
+// }
