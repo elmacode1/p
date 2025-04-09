@@ -1,9 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   algo.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mael-gho <mael-gho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/09 12:47:30 by mael-gho          #+#    #+#             */
+/*   Updated: 2025/04/09 13:52:48 by mael-gho         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "pushswap.h"
 
-int	get_highest_pst(t_list *stack, int i)
+void	ft_printerror()
+{
+	ft_printf("Error");
+	exit(1);
+}
+
+size_t	get_highest_pst(t_list *stack, int i)
 {
 	t_list	*tmp;
-	int		j;
+	size_t	j;
 
 	tmp = stack;
 	j = 0;
@@ -17,16 +35,16 @@ int	get_highest_pst(t_list *stack, int i)
 	return (j);
 }
 
-int	get_idx_pst(t_list *stack, int i)
+size_t	get_idx_pst(t_list *stack, int val)
 {
 	t_list	*tmp;
-	int		j;
+	size_t	j;
 
 	tmp = stack;
 	j = 0;
 	while (tmp)
 	{
-		if (tmp->index < i)
+		if (tmp->index < val)
 			break ;
 		j++;
 		tmp = tmp->next;
@@ -64,8 +82,8 @@ void	push_to_b(t_list **stackA, t_list **stackB, int p)
 
 void	push_to_a(t_list **stackA, t_list **stackB)
 {
-	int	highest;
-	int	position;
+	int		highest;
+	size_t	position;
 
 	highest = max(stackB);
 	position = get_highest_pst(*stackB, highest);
